@@ -1,0 +1,376 @@
+html {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	height: calc(100vh - 80px);
+	margin: 40px;
+	box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.3);
+}
+
+.container--bgColor {
+	background-color: transparent;
+}
+
+.main {
+	height: 100%;
+	width: calc(100% - 150px);
+	font-family: Pacifico, Arial, Helvetica, sans-serif;
+	background-color: whitesmoke;
+	overflow: hidden;
+	position: relative;
+}
+
+.heading {
+	text-align: center;
+	font-size: 35px;
+	padding: 17px 0;
+	margin: 0;
+}
+
+.heading--color {
+	/* color: #5fb5e6; */
+	color: #383838;
+}
+
+.nav {
+	width: 150px;
+	height: 100%;
+	overflow: hidden;
+}
+
+.nav--bgColor {
+	/* background-color: #2f2d2e; */
+	background-color: #252324;
+}
+
+.nav__menu {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.nav__menuItem {
+	margin: 33px 0;
+	height: 48px;
+	position: relative;
+}
+
+.nav__button {
+	color: #9f9f9f;
+	text-decoration: none;
+	width: calc(100% + 80.13px);
+	padding: 19px 5px;
+	display: block;
+	transform: rotate(-21deg);
+	background-color: #252324;
+	margin-left: -36.13px;
+	font-weight: bold;
+	font-size: 20px;
+	padding-left: 50px;
+	font-family: Pacifico;
+	position: relative;
+	transition: color 0.5s;
+}
+
+.nav__button--active {
+	color: white;
+}
+
+.nav__button:hover {
+	color: #5fb5e6;
+}
+
+.screen {
+	background-color: whitesmoke;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	visibility: visible;
+	opacity: 1;
+	transition-property: top, visibility, opacity;
+	transition-duration: 0.3s, 0.3s, 0.2s;
+	transition-delay: 0s, 0.2s, 0.2s;
+}
+
+.screen__body {
+	position: relative;
+	height: calc(100% - 192px);
+	bottom: -96px;
+}
+
+.screen--hidden {
+	opacity: 0;
+	z-index: 0;
+	top: 100%;
+	visibility: hidden;
+}
+
+.screen--removed {
+	display: none;
+}
+
+.slide {
+	height: 200px;
+	margin: 6.2em 0;
+	position: relative;
+}
+
+.slide__item {
+	font-size: 3.9em;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	font-weight: bold;
+	text-align: center;
+	margin: 1em 0;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 90px;
+	visibility: hidden;
+	opacity: 0;
+	animation-name: slide-in-and-out;
+	animation-iteration-count: infinite;
+	animation-duration: 9s;
+}
+
+.slide__item--slideInFirst {
+	animation-delay: 0s;
+}
+
+.slide__item--slideInSecond {
+	animation-delay: 3s;
+}
+
+.slide__item--slideInThird {
+	animation-delay: 6s;
+}
+
+.button {
+	margin: 10px;
+	padding: 20px;
+	outline: none;
+	border: none;
+	font-weight: bold;
+	box-shadow: 0px 0px 3px 1px #5fb5e6a6;
+}
+
+.button--blue {
+	background-color: #5fb5e6;
+	color: white;
+}
+
+.button--rounded {
+	border-radius: 5px;
+}
+
+.button--lg {
+	min-width: 230px;
+	padding: 30px;
+	font-size: 1.2em;
+}
+
+.button--animate {
+	animation-name: jitter;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
+	animation-delay: 5s;
+}
+
+.cssSyntax {
+	width: max-content;
+	margin: auto;
+	font-family: Operator Mono A, Operator Mono B, Source Code Pro, Menlo,
+		Consolas, Monaco, monospace;
+	font-weight: bold;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	font-size: 2em;
+	position: relative;
+	padding-top: 60px;
+}
+
+.cssSyntax__open {
+	min-width: 200px;
+	position: relative;
+}
+
+.cssSyntax__body {
+	min-width: 200px;
+	position: relative;
+	margin-left: 45px;
+}
+
+.selector {
+	color: indianred;
+	position: relative;
+}
+
+.property,
+.colon {
+	color: royalblue;
+	position: relative;
+}
+
+.value {
+	color: dodgerblue;
+}
+
+.semiColon {
+	color: indigo;
+	margin-left: -17px;
+}
+
+.colon {
+	margin-left: -17px;
+}
+
+.brace {
+	color: darkmagenta;
+}
+
+.cssSyntax__close {
+	min-width: 200px;
+	position: relative;
+}
+
+.selector__annotate--color,
+.property__annotate--color,
+.value__annotate--color {
+	--color: firebrick;
+}
+
+.selector__annotate::after {
+	background-color: transparent;
+	height: 0;
+	width: 0px;
+	border-bottom: 11px solid var(--color);
+	border-top: none;
+	border-left: 4px solid transparent;
+	border-right: 7px solid transparent;
+	content: "";
+	position: absolute;
+	left: -4px;
+	top: 0px;
+	transform: rotate(13deg);
+}
+
+.selector__annotate::before {
+	content: "selector";
+	transform: rotate(-174deg);
+	position: absolute;
+	top: 57px;
+	left: 66px;
+	font-size: 23px;
+}
+
+.selector__annotate {
+	position: absolute;
+	height: 64px;
+	width: 64px;
+	background-color: transparent;
+	border-bottom: 5px solid var(--color);
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 100px;
+	transform: rotate(-186deg);
+	top: -55px;
+	left: -60px;
+	transition: opacity 0.4s;
+	opacity: 0;
+}
+
+.selector:hover .selector__annotate,
+.property:hover .property__annotate,
+.value:hover .value__annotate {
+	opacity: 1;
+}
+
+.property__annotate::after {
+	background-color: transparent;
+	height: 0;
+	width: 0px;
+	border-top: 11px solid var(--color);
+	border-bottom: none;
+	border-left: 7px solid transparent;
+	border-right: 4px solid transparent;
+	content: "";
+	position: absolute;
+	left: -6px;
+	bottom: 1px;
+	transform: rotate(18deg);
+}
+
+.property__annotate::before {
+	content: "property";
+	position: absolute;
+	top: -23px;
+	left: 66px;
+	font-size: 23px;
+}
+
+.property__annotate {
+	position: absolute;
+	height: 64px;
+	width: 64px;
+	background-color: transparent;
+	border-top: 5px solid var(--color);
+	border-bottom-right-radius: 0px;
+	border-top-left-radius: 100px;
+	top: -64px;
+	right: -19px;
+	transition: opacity 0.4s;
+	opacity: 0;
+}
+
+.value__annotate::after {
+	background-color: transparent;
+	height: 0;
+	width: 0px;
+	border-top: 11px solid var(--color);
+	border-bottom: none;
+	border-left: 7px solid transparent;
+	border-right: 4px solid transparent;
+	content: "";
+	position: absolute;
+	left: -6px;
+	bottom: 1px;
+	transform: rotate(18deg);
+}
+
+.value__annotate::before {
+	content: "value";
+	position: absolute;
+	top: -16px;
+	left: 69px;
+	font-size: 23px;
+	transform: rotate(180deg);
+}
+
+.value__annotate {
+	position: absolute;
+    height: 64px;
+    width: 64px;
+    background-color: transparent;
+    border-top: 5px solid var(--color);
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 100px;
+    top: 40px;
+    right: 50px;
+    transition: opacity 0.4s;
+    opacity: 0;
+    transform: rotate(180deg);
+}

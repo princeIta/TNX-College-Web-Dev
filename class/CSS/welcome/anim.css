@@ -1,0 +1,65 @@
+@keyframes slide-in-and-out {
+	0% {
+		top: 90px;
+		visibility: hidden;
+		opacity: 0;
+	}
+
+	1% {
+		visibility: visible;
+	}
+
+	5.6% {
+		top: 0;
+		opacity: 1;
+	}
+
+	28% {
+		top: 0;
+		opacity: 1;
+	}
+
+	33.6% {
+		top: 90px;
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+@keyframes jitter {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	90% {
+		transform: rotate(0deg);
+	}
+
+	91% {
+		transform: rotate(-10deg);
+	}
+
+	92% {
+		transform: rotate(10deg);
+	}
+
+	93% {
+		transform: rotate(-10deg);
+	}
+
+	94% {
+		transform: rotate(10deg);
+	}
+
+	95% {
+		transform: rotate(-10deg);
+    }
+
+    98% {
+		transform: rotate(10deg);
+    }
+
+    100%{
+        transform: rotate(0deg);
+    }
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="anim.css">
+    <link href='Pacifico/pacifico.css' rel='stylesheet'>
+
+    <script src="lib/utils.js"></script>
+    <script src="lib/jsObjFromDomElem.js"></script>
+
+    <title>Intro To CSS</title>
+</head>
+
+<body style="margin: 0; background-color: #efefef;">
+    <section class="container container--bgColor">
+        <!-- Nav Menu -->
+        <nav class="nav nav--bgColor">
+            <ul class="nav__menu">
+                <li class="nav__menuItem">
+                    <a id="nav-start-button" screen="Home Screen" class="nav__button js-nav__button" href="">Howdy</a>
+                </li>
+                <li class="nav__menuItem">
+                    <a id="nav-syntax-button" screen="Syntax Screen" class="nav__button js-nav__button"
+                        href="">Syntax</a>
+                </li>
+                <li class="nav__menuItem">
+                    <a id="nav-apply-styles-button" screen="Styles Screen" class="nav__button js-nav__button"
+                        href="">Applying<br>Styles</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Display -->
+        <main class="main" id="main">
+            <!-- Home Screen -->
+            <section class="screen" id="Home Screen">
+                <header class="screen__header">
+                    <h1 class="heading heading--color">Howdy</h1>
+                </header>
+
+                <section class="screen__content">
+                    <section>
+                        <section class="slide">
+                            <div class="slide__item slide__item--slideInFirst">Welcome Folks</div>
+                            <div class="slide__item slide__item--slideInSecond">To The Great</div>
+                            <div class="slide__item slide__item--slideInThird">CSS Course</div>
+                        </section>
+                        <p style="display: flex; justify-content: center;">
+                            <button id="start-button"
+                                class="button button--blue button--rounded button--lg button--animate">
+                                FASTEN YOUR SEAT BELTS
+                            </button>
+                        </p>
+                    </section>
+                </section>
+            </section>
+
+            <!-- Syntax Screen -->
+            <section class="screen" id="Syntax Screen">
+                <header class="screen__header">
+                    <h1 class="heading heading--color">Syntax</h1>
+                </header>
+
+                <section class="screen__body">
+                    <article class="cssSyntax">
+                        <div class="cssSyntax__open">
+                            <span class="selector">
+                                <div class="selector__annotate selector__annotate--color"></div>
+                                p
+                            </span>
+                            <span class="brace">{</span>
+                        </div>
+                        <div class="cssSyntax__body">
+                            <span class="property">
+                                <div class="property__annotate property__annotate--color"></div>
+                                color
+                            </span>
+                            <span class="colon">:</span>
+                            <span class="value">
+                                <div class="value__annotate value__annotate--color"></div>
+                                red
+                            </span>
+                            <span class="semiColon">;</span>
+                        </div>
+                        <div class="cssSyntax__close">
+                            <span class="brace">}</span>
+                        </div>
+                    </article>
+                </section>
+            </section>
+        </main>
+    </section>
+    <script src="lib/screenManager.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
