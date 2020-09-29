@@ -1,0 +1,66 @@
+.navBar{
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    background: cyan;
+    height: 60px;
+    align-items: center;
+    justify-content: flex-end;
+    width: calc(85% - 60px);
+    padding-right: 60px;
+}
+
+.nav-logo{
+	height: 100%;
+    margin-right: 160px;
+}
+
+.navBar__item{
+	padding: 18px 7px;
+    cursor: pointer;
+    margin: 0 10px;
+    position: relative;
+}
+
+.navBar__item:hover .navBar__submenu--visibility{
+	display: block;
+}
+
+.navBar__submenu{
+	list-style-type: none;
+    padding: 12px 17px;
+    margin: 0;
+    position: absolute;
+    background: bisque;
+    line-height: 30px;
+    border-radius: 5px;
+    left: 0;
+    top: calc(100% - 10px);
+}
+
+.navBar__submenu--visibility{
+	display: none;
+}
+
+.navBar__submenuLink--active{
+	color: green;
+	cursor: default;
+}
+
+.navBar__item--active{
+	color: yellow;
+}
+
+.navBar__item > span{
+	color: red;
+	font-size: 2em;
+	font-weight: bolder;
+}
+
+.navBar__item span{
+	color: indigo;
+	font-size: 3em;
+	font-weight: bolder;
+}

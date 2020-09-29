@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        html {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        *,
+        *:before,
+        *:after {
+            -webkit-box-sizing: inherit;
+            -moz-box-sizing: inherit;
+            box-sizing: inherit;
+        }
+
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <main style="
+        height: 97vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    ">
+        <article style="width: 50%">
+            <h1 style="color: #14151f; border-left: 3px solid #14151f; padding-left: 10px">CSS</h1>
+            <section style="padding: 5px 20px; background-color: #14151f; border-radius: 15px; line-height: 1.7em">
+                <p
+                    style="color: #72e0d1; font-family: Operator Mono A,Operator Mono B,Source Code Pro,Menlo,Consolas,Monaco,monospace;">
+                    The "C" in CSS stands for cascading.
+                    Styles are said to cascade because they
+                    follow a specific hierarchy. We learned above three
+                    different ways to apply styles, but what if you tried
+                    to style the same element in each of three different ways?
+                </p>
+
+                <p
+                    style="color: #72e0d1; font-family: Operator Mono A,Operator Mono B,Source Code Pro,Menlo,Consolas,Monaco,monospace;">
+                    The hierarchy that the browser will follow is external, internal, then inline. Technically speaking,
+                    all
+                    of
+                    the styles will apply, but only the inline styles will win in the end. There is one exception,
+                    however,
+                    and
+                    that is when you use the important rule.
+                </p>
+            </section>
+        </article>
+
+        <article style="width: 50%">
+            <h1 style="color: #14151f; border-left: 3px solid #14151f; padding-left: 10px">The Important Rule</h1>
+            <section style="padding: 5px 20px; background-color: #14151f; border-radius: 15px; line-height: 1.7em;">
+                <p
+                    style="color: #72e0d1; font-family: Operator Mono A,Operator Mono B,Source Code Pro,Menlo,Consolas,Monaco,monospace;">
+                    The important rule is an exception that you can apply to your styles that tells the browser "make
+                    this
+                    CSS
+                    rule apply, no matter what". It is generally frown upon to be used unless absolutely necessary
+                    because
+                    it
+                    violates the cascading nature of CSS.
+                </p>
+            </section>
+        </article>
+        <a href="git_practice.html" target="_blank">Go to git practice page</a>
+    </main>
+</body>
+
+</html>
